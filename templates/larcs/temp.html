@@ -1,0 +1,24 @@
+<!DOCTYPE html> <!-- Always put this or the HTML markup will fail validation -->
+
+{% load static %} <!-- New line --> <!-- informs Django's template engine that we will be using static files within template-->
+
+<html>
+
+	<head>
+		<title>Temporary index view</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+	</head>
+	
+	<body>
+		<h1>Temporary links to dashboard and forms examples ...</h1>
+		<br />
+		
+		<div>
+			<a href="/larcs/admin_dashboard/">ADMIN DASHBOARD</a><br />
+			<a href="/larcs/display_form/">ALL 3 FORMS</a><br />
+			<a href="/larcs/login/">HOME SCREEN</a><br />
+			<a href="/larcs/eoi/">EXPRESSION OF INTEREST</a><br />
+		</div>
+	</body>
+
+</html>

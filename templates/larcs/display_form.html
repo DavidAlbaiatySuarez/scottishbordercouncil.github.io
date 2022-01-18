@@ -1,0 +1,22 @@
+<!DOCTYPE html> <!-- Always put this or the HTML markup will fail validation -->
+
+{% load static %} <!-- New line --> <!-- informs Django's template engine that we will be using static files within template-->
+
+<html>
+
+	<head>
+		<title>Form selector</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/display_form.css' %}" />
+	</head>
+	
+	<body>
+		
+		
+		<div class="container">
+			<a href="/larcs/form_level1/" id="ready">LEVEL 1 APPLICATION FORM</a>
+			<a href="/larcs/form_level2/" id="ready">LEVEL 2 APPLICATION FORM</a>
+			<a href="#" id="not_ready">LEVEL 3 APPLICATION FORM</a>
+		</div>
+	</body>
+
+</html>

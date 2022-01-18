@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>Admin Dashboard First Iteration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	
+</head>
+<body>
+    
+    <input type="checkbox" id="sidebar-toggle">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h3 class="brand">
+                <!-- <span class="ti-unlink"></span> -->
+                <span>Administrator</span>
+            </h3> 
+            <label for="sidebar-toggle" class="ti-menu-alt"></label>
+        </div>
+        
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="">
+                        <span class="ti-home"></span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-face-smile"></span>
+                        <span>Team Contact Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-agenda"></span>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+				
+                <li>
+                    <a href="">
+                        <span class="ti-folder"></span>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-time"></span>
+                        <span>Timesheet</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="ti-settings"></span>
+                        <span>Account</span>
+                    </a>
+                </li>
+				<li>
+                    <a href="">
+                        <span class="ti-power-off"></span>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    
+    <div class="main-content">
+        
+        <header>
+            <div class="search-wrapper">
+                <span class="ti-search"></span>
+                <input type="search" placeholder="Search">
+            </div>
+            
+            <div class="social-icons">
+                <span class="ti-bell"></span>
+						<h4> 3</h4>
+				<span class="ti-comment"></span>
+				<span class="ti-user"></span>
+            </div>
+        </header>
+        
+        <main>
+            
+            <h2 class="dash-title">Good evening, Simon Lynch</h2>
+            
+            <div class="dash-cards">
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-flag-alt-2"></span>
+                        <div>
+                            <h5>Application forms requiring assistance</h5>
+                            <h4 style="color:red;">1</h4>
+                        </div>
+                    </div>
+					
+                    <div class="card-footer">
+                        <a href="#">View all</a>
+						
+                    </div>
+					<!--
+					<tr id="hidden_row">
+						<td colspan=4>
+							Person-1 is 24 years old and 
+							he is a computer programmer 
+							he earns 60000 per month
+						</td>
+					</tr>
+					-->
+                </div>
+                
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-reload"></span>
+                        <div>
+                            <h5>Pending Application Forms</h5>
+                            <h4 style="color:orange;">2</h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">View all</a>
+                    </div>
+                </div>
+                
+                <div class="card-single">
+                    <div class="card-body">
+                        <span class="ti-check-box"></span>
+                        <div>
+                            <h5>Processed Application Forms</h5>
+                            <h4 style="color:green;">25</h4>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">View all</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3>Live Projects</h3>
+                        
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Level</th>
+										<th>CH/OSCR</td>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Borders Marine Reserve</td>
+                                        <td>2</td>
+										<td>SCO50016</td>
+                                        <td>Joe Smith</td>
+										<td>joe@bordersmarinereserve.org.uk </td>
+                                        <!--
+										<td class="td-team">
+                                            <div class="img-1"></div>
+                                            <div class="img-2"></div>
+                                            <div class="img-3"></div>
+                                        </td> -->
+                                        <td>
+                                            <span class="badge warning">Processing</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Composting for Waste Disposal</td>
+                                        <td>1</td>
+										<td>SCO10021</td>
+                                        <td>Cloe Smith</td>
+										<td>cloe@wastedisposal.org.uk </td>
+                                        <td>
+                                            <span class="badge success">Submitted</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Plant trees on school grounds</td>
+                                        <td>3</td>
+										<td>SCO10111</td>
+                                        <td>Adam White</td>
+										<td>adam@schooltrees.org.uk </td>
+                                        <td>
+                                            <span class="badge failure">Failure</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Production of organic fertilizers and pesticides</td>
+                                        <td>2</td>
+										<td>SCO30011</td>
+                                        <td>James Patrick</td>
+										<td>james@gmail.com </td>
+                                        <td>
+                                            <span class="badge success">Submitted</span>
+                                        </td> 
+                                    </tr>
+                                    <tr>
+                                        <td>Alternative transportation incentive program</td>
+                                        <td>2</td>
+										<td>SCO50333</td>
+                                        <td>Jennifer Chung</td>
+										<td>jenn@hotmail.com </td>
+                                        <td>
+                                            <span class="badge warning">Processing</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="summary">
+                        <div class="summary-card">
+                            <div class="summary-single">
+                                <span class="ti-money"></span>
+                                <div>
+                                    <h5>10</h5>
+                                    <small>Level 1 Applications</small>
+                                </div>
+                            </div>
+                            <div class="summary-single">
+                                <span class="ti-money"></span>
+								<span class="ti-money"></span>
+                                <div>
+                                    <h5>5</h5>
+                                    <small>Level 2 Applications</small>
+                                </div>
+                            </div>
+                            <div class="summary-single">
+                                <span class="ti-money"></span>
+								<span class="ti-money"></span>
+								<span class="ti-money"></span>
+                                <div>
+                                    <h5>2</h5>
+                                    <small>Level 3 Applications</small>
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="summary">
+							<div class="summary-card">
+								<div class="summary-single">
+									<span class="ti-pencil"></span>
+										<div>
+											<h5>20</h5>
+											<small>Review Reports</small>
+										</div>
+								</div>
+								<div class="summary-single">
+									<span class="ti-money"></span>
+										<div>
+											<h5>10</h5>
+											<small>Review Budgets</small>
+										</div>
+								</div>
+								<div class="summary-single">
+									<span class="ti-exchange-vertical"></span>
+										<div>
+											<h5>4</h5>
+											<small>Manage Change Request</small>
+										</div>
+								</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        
+    </div>
+    
+</body>
+</html>

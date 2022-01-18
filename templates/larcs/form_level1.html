@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{% static 'css/eoi.css' %}">
+	</head>
+
+<body>
+	<div class="container__main">
+		
+		<div class="eoi__header">
+			<h1 style="text-align:center;"> Level 1 Funding Application Form </h1>
+			<h1 style="text-align:center;"> (Less Than £15k) </h1>
+			<br />
+			Thank you for your interest in the 
+			Scottish Borders Rural Communities Test of Change programme.
+			Please complete this Application Form.
+		</div>
+		
+		<form id="level1-form" action="#" method="post">
+			
+			{% csrf_token %}
+			
+			<div style="text-align:center;margin-top:20px;margin-bottom:20px">
+				<span class="step">1</span>
+				<span class="step">2</span>
+				<span class="step">3</span>
+				<span class="step">4</span>
+				
+			</div>
+			
+			<!-- One "tab" for each step in the form: -->
+			<div class="tab">
+				<h4> Please provide us with a contact name: </h4>
+				<p><input oninput="this.className = ''" type="text" name="name" placeholder="Name"></p>
+				<h4> Please provide us with an email address: </h4>
+				<p><input  oninput="this.className = ''" type="text" name="email" placeholder="Email"></p>
+				<h4> Please tell us the name of your organisation: </h4>
+				<p><input oninput="this.className = ''" type="text" name="organisation" placeholder="Organisation name"></p>
+				<h4> Please tell us the title of your proposed project: </h4>
+				<p><input  oninput="this.className = ''" type="text" name="title" placeholder="Title"></p>
+				<h4> (Optional) Provide a Companies House or OSCR Registration number below: </h4>
+				<p><input oninput="this.className = ''" type="text" name="id_number" placeholder="Companies House/OSCR Registration number"></p>
+				<h4> Please briefly tell us about your project and what you are looking to achieve.. (Max 300 words) </h4>
+				<p><textarea oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_1"></textarea></p>
+			</div>
+								
+			<div class="tab">
+				<h3> Co-Production (Human) </h3>
+				<h4> Please describe your user group and your understanding of their needs (Please limit to 200 words): </h4>
+				<p><textarea oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_2"></textarea></p>
+				<h3> Capacity building (Learning) </h3>
+				<h4> Please decribe how learning is captured and reflected (Please limit to 200 words): </h4>
+				<p><textarea oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_3"></textarea></p>
+				<h3> Partnership working (Systems) </h3>
+				<h4> Please tell us about the opportunities you have to be working in partnership (Please limit to 200 words):</h4>
+				<p><textarea oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_4"></textarea></p>
+			</div>
+			<div class="tab">
+				<h3> Climate and Environment </h3>
+				<h4> How will your project impact on the climate and environment and how much will you manage this (Please limit to 200 words):</h4>
+				<p><textarea oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_5"></textarea></p>
+				<h3> Local economic and resilience building </h3>
+				<h4> Please tell us how the project will impact on local economy (Please limit to 200 words): </h4>
+				<p><textarea oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_6"></textarea></p>
+				<h3> Social return </h3>
+				<h4> Please tell us about the social impacts and contribution to local resilience your project will have (Please limit to 200 words): </h4>
+				<p><textarea oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_7"></textarea></p>
+			</div>
+								
+			<div class="tab">
+				<h3> (Optional) Comments and Feedback </h3>
+				<h4> Please use this space to comment on the process and give your feedback on how we might improve things... </h4>
+				<p><textarea id="optional" oninput="this.className = ''" rows="8" cols="120" style="resize: none;" name="box_9"></textarea></p>
+			</div>
+								
+			<div class="tab">
+				<h4> Thanks for completing the level 1 application. Double check all information provided and submit when ready. </h4>
+			</div>
+									
+			<div style="overflow:auto;">
+				<div style="float:center;">
+					<button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+					<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+				</div>
+			</div>
+		</form>
+		<script src="{% static 'js/form.js' %}"></script>
+	</div>
+</body>
+
+</html>
